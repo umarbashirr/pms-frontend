@@ -11,3 +11,12 @@ export const ClientLoginFormSchema = z.object({
     .string({ message: "Password is required!" })
     .min(2, { message: "Password should be minimum 06 characters" }),
 });
+
+export const AdminLoginFormSchema = z.object({
+  email: z
+    .string({ message: "Email is required!" })
+    .min(2, { message: "Please enter a valid email!" }),
+  password: z
+    .string({ message: "Password is required!" })
+    .min(2, { message: "Password should be minimum 06 characters" }),
+});
